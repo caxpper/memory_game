@@ -3,7 +3,7 @@
  */
 var first_card_clicked = null;
 var second_card_clicked = null;
-var total_possible_matches = 2;
+var total_possible_matches = 9;
 var match_counter = 0;
 
 var frontCards = ["bobble","bobble2","bomb","bomb2","dk","dk2",
@@ -58,6 +58,19 @@ function create_card(front_class){
     var back = $('<div>',{
         class: "back"
     });
+    if(index !== -1){
+        var front2 = $('<div>',{
+            id: id,
+            class: "front " + front_class.slice(0,index) + 4
+        });
+        card.append(front2);
+    }else {
+        var front2 = $('<div>',{
+            id: id,
+            class: "front " + front_class + 3
+        });
+        card.append(front2);
+    }
     card.append(front);
     card.append(back);
     return card;
@@ -67,14 +80,32 @@ function card_clicked(){
 
     $(this).addClass("hidden");
     if(first_card_clicked===null){
-        first_card_clicked = $(this).find(".front").attr("id");
+        first_card_clicked = $(this);
         return true;
     }else{
-        second_card_clicked = $(this).find(".front").attr("id");
-        if(first_card_clicked == second_card_clicked){
+        second_card_clicked = $(this);
+        if(first_card_clicked.find(".front").attr("id") === second_card_clicked.find(".front").attr("id")){
             match_counter++;
+            second_card_clicked.find("."+second_card_clicked.find(".front").attr("id")+"4").addClass("animation_fadeToTransparent");
+            second_card_clicked.find("."+second_card_clicked.find(".front").attr("id")+"2").addClass("animation_transparentToFade");
+            first_card_clicked.find("."+first_card_clicked.find(".front").attr("id")+"3").addClass("animation_fadeToTransparent");
+            first_card_clicked.find("."+first_card_clicked.find(".front").attr("id")).addClass("animation_transparentToFade");
+            first_card_clicked = null;
+            second_card_clicked = null;
+            if(total_possible_matches===match_counter){
+               $('.message').text("You Won!");
+                $('.message').removeClass("hidden");
+            }else{
+                return true;
+            }
         }else{
-            var i = 0;
+            setTimeout(function(){
+                first_card_clicked.removeClass("hidden");
+                second_card_clicked.removeClass("hidden");
+                first_card_clicked = null;
+                second_card_clicked = null;
+            }, 2000);
+            return true;
         }
     }
 }

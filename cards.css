@@ -40,10 +40,24 @@
     background-position: center;
 }
 
+.pacman3{
+    background-image: url("image/pacman3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+}
+
 .pacman2{
     background-image: url("image/pacman2.png");
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.pacman4{
+    background-image: url("image/pacman4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
 }
 
 .pole{
@@ -104,4 +118,44 @@
     background-image: url("image/zelda2.png");
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.transparent {
+    opacity:0;
+}
+
+.no-transparent {
+    opacity: 1s;
+}
+
+.animation_fadeToTransparent{
+    animation-name: fadeToTransparent;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeToTransparent {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animation_transparentToFade{
+    animation-name: transparentToFade;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes transparentToFade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }

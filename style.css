@@ -1,3 +1,7 @@
+html{
+    font-size: 4vmin;
+}
+
 body{
     width: 100vw;
 }
@@ -10,12 +14,17 @@ header{
     padding: 10px;
     box-sizing: border-box;
     font-family: packmanFont;
-    font-size: 40px;
+    font-size: 1rem;
 }
 
 @font-face {
     font-family: packmanFont;
     src: url(Games.ttf);
+}
+
+@font-face {
+    font-family: press;
+    src: url(PressStart2P.ttf);
 }
 
 .main-section{
@@ -58,10 +67,22 @@ header{
 }
 
 .gameArea1{
+    position: relative;
     border-left: 70px solid;
     border-right: 70px solid;
     border-color: #d200ff;
     display: inline-block;
+}
+
+.message{
+    position: absolute;
+    font-family: press;
+    font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+
 }
 
 .gameArea2{
@@ -86,33 +107,60 @@ header{
 .card{
     position: relative;
     display: inline-block;
-    margin: 30px;
-    width: 100px;
-    height: 147px;
+    margin: 25px;
+    width: 110px;
+    height: 157px;
 }
 
 .front{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 82%;
     border: 3px solid;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10%;
 }
 
 .back{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 82%;
     background-image: url("image/arcade.png");
     background-repeat: no-repeat;
     background-position: center;
     background-color: cadetblue;
     border: 3px solid;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10%;
 }
 
 .hidden > .back{
     display: none;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity:1;
+    }
+    45% {
+        opacity:1;
+    }
+    55% {
+        opacity:0;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+#cf3 img.top {
+    animation-name: fadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
 }

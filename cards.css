@@ -1,234 +1,162 @@
 .bobble{
     background-image: url("image/bobble.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .bobble2{
     background-image: url("image/bobble2.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .bobble3{
     background-image: url("image/bobble3.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .bobble4{
     background-image: url("image/bobble4.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .bomb{
     background-image: url("image/bomb.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .bomb2{
     background-image: url("image/bomb2.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .bomb3{
     background-image: url("image/bomb3.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .bomb4{
     background-image: url("image/bomb4.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .dk{
     background-image: url("image/dk.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .dk2{
     background-image: url("image/dk2.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .dk3{
     background-image: url("image/dk3.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .dk4{
     background-image: url("image/dk4.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .pacman{
     background-image: url("image/pacman.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .pacman3{
     background-image: url("image/pacman3.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .pacman2{
     background-image: url("image/pacman2.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .pacman4{
     background-image: url("image/pacman4.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .pole{
     background-image: url("image/pole.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .pole2{
     background-image: url("image/pole2.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .pole3{
     background-image: url("image/pole3.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .pole4{
     background-image: url("image/pole4.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .sf{
     background-image: url("image/sf.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .sf3{
     background-image: url("image/sf3.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .sf4{
     background-image: url("image/sf4.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .sf2{
     background-image: url("image/sf2.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .galaga{
     background-image: url("image/galaga.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .galaga2{
     background-image: url("image/galaga2.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .galaga3{
     background-image: url("image/galaga3.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .galaga4{
     background-image: url("image/galaga4.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .tetris{
     background-image: url("image/tetris.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tetris2{
     background-image: url("image/tetris2.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .tetris3{
     background-image: url("image/tetris3.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .tetris4{
     background-image: url("image/tetris4.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .zelda{
     background-image: url("image/zelda.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .zelda2{
     background-image: url("image/zelda2.png");
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .zelda3{
     background-image: url("image/zelda3.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 
 .zelda4{
     background-image: url("image/zelda4.png");
-    background-repeat: no-repeat;
-    background-position: center;
     opacity: 0;
 }
 

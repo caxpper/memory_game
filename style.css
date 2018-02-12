@@ -37,15 +37,29 @@ header img{
 }
 
 .stats{
+    position: relative;
     vertical-align: top;
     display: inline-block;
     background-color: black;
     color: white;
     height: 100%;
+    font-size: 0.3rem;
     text-align: center;
     padding: 10px;
     width: 15%;
     box-sizing: border-box;
+}
+
+.stats_text{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.stats a{
+    display: block;
+    margin-top: 30px;
+    text-decoration: none;
 }
 
 .title{
@@ -58,10 +72,13 @@ header img{
 }
 
 .title div{
-    color: white;
-    height: 100%;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    color: #fff;
+    height: 90%;
     width: 2rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     writing-mode: vertical-rl;
     text-orientation: upright;
     text-align: center;
@@ -84,11 +101,13 @@ header img{
 .message{
     position: absolute;
     font-family: pressFont;
+    color: gold;
     font-size: 4rem;
     top: 50%;
-    left: 50%;
+    left: 53%;
     transform: translate(-50%,-50%);
     z-index: 10;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
 
 .machine{
@@ -100,10 +119,11 @@ header img{
 }
 
 .gameArea{
+    position: relative;
     display: inline-block;
     border: 1px solid;
     border-radius: 30px;
-    background-color: white;
+    background-color: black;
     width: 100%;
     height: 100%;
 }
@@ -156,7 +176,8 @@ header img{
     box-sizing: border-box;
 }
 
-.card{
+.card_container{
+    perspective: 1000px;
     position: relative;
     display: inline-block;
     margin: 1.5%;
@@ -164,30 +185,45 @@ header img{
     height: 97%;
 }
 
-.front{
+.card{
+    transition: 0.2s;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.front, .back{
     position: absolute;
     top: 0;
     left: 0;
     width: 75%;
     height: 82%;
-    border: 3px solid;
+    border: 3px solid #d200ff;
     border-radius: 5px;
     padding: 10%;
+    backface-visibility: hidden;
+}
+
+.front{
+    transform: rotateY(180deg);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
 }
 
 .back{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 75%;
-    height: 82%;
     background-image: url("image/arcade.png");
     background-repeat: no-repeat;
     background-position: center;
     background-color: cadetblue;
-    border: 3px solid;
-    border-radius: 5px;
-    padding: 10%;
+    background-size:contain;
+    transform: rotateY(0deg);
+}
+
+.flip{
+    transform: rotateY(180deg);
 }
 
 .hidden > .back{
@@ -209,3 +245,91 @@ footer img{
     height: 100%;
 }
 
+
+@keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+}
+
+@keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+    }
+}
+
+.glowbutton{
+    text-align:center;
+    text-decoration:none;
+    padding:1vh 1vw;
+    border-size:3px;
+    border-style:solid;
+    border-radius:10px;
+    transition:all .1s linear;
+    margin:0.5vh 2vw;
+}
+
+.reset_button{
+    border-color:#ff00de;
+    color:#ff00de;
+    box-shadow:0px 0px 2px 1px #ff00de,
+    inset 0px 0px 2px #ff00de;
+    text-shadow:0px 0px 2px #ff00de;
+}
+.reset_button:hover{
+    box-shadow:0px 0px 10px 5px #ff00de,
+    inset 0px 0px 7px #ff00de;
+    text-shadow:0px 0px 4px #ff00de;
+}
+
+/*************** About.html ****************************/
+.about{
+    text-align: center;
+    margin: auto;
+    background-color: black;
+}
+
+.about_display{
+    text-align: left;
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 30px;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: pressFont;
+    color: whitesmoke;
+}
+
+.about_display img {
+    width: 15%;
+}
+
+.about_display a {
+    font-size: 0.8vw;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.about_display h3 {
+    vertical-align: middle;
+    font-size: 1.2vw;
+}
+
+.about_display p {
+    text-align: left;
+    vertical-align: middle;
+    font-size: 0.8vw;
+}
+.about_display li {
+    text-align: left;
+    font-size: 0.8vw;
+}

@@ -1,0 +1,161 @@
+.bobble{
+    background-image: url("image/bobble.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bobble2{
+    background-image: url("image/bobble2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bomb{
+    background-image: url("image/bomb.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bomb2{
+    background-image: url("image/bomb2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dk{
+    background-image: url("image/dk.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dk2{
+    background-image: url("image/dk2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pacman{
+    background-image: url("image/pacman.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pacman3{
+    background-image: url("image/pacman3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+}
+
+.pacman2{
+    background-image: url("image/pacman2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pacman4{
+    background-image: url("image/pacman4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+}
+
+.pole{
+    background-image: url("image/pole.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pole2{
+    background-image: url("image/pole2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sf{
+    background-image: url("image/sf.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sf2{
+    background-image: url("image/sf2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.space{
+    background-image: url("image/space.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.space2{
+    background-image: url("image/space2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tetris{
+    background-image: url("image/tetris.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tetris2{
+    background-image: url("image/tetris2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.zelda{
+    background-image: url("image/zelda.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.zelda2{
+    background-image: url("image/zelda2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.transparent {
+    opacity:0;
+}
+
+.no-transparent {
+    opacity: 1s;
+}
+
+.animation_fadeToTransparent{
+    animation-name: fadeToTransparent;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeToTransparent {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.animation_transparentToFade{
+    animation-name: transparentToFade;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes transparentToFade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

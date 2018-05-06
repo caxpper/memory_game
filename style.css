@@ -4,163 +4,332 @@ html{
 
 body{
     width: 100vw;
+    height: 100vh;
+    margin: auto;
+    font-size: 0;
 }
 
 header{
     text-align: center;
     width: 100%;
-    background-color: #122b40;
+    height: 17.8%;
     color: white;
-    padding: 10px;
     box-sizing: border-box;
-    font-family: packmanFont;
-    font-size: 1rem;
+}
+
+header img{
+    width: 100%;
+    height: 100%;
 }
 
 @font-face {
-    font-family: packmanFont;
+    font-family: pacmanFont;
     src: url(Games.ttf);
 }
 
 @font-face {
-    font-family: press;
+    font-family: pressFont;
     src: url(PressStart2P.ttf);
 }
 
 .main-section{
     width: 100%;
-    padding: 3%;
-    box-sizing: border-box;
-    text-align: center;
 }
 
 .stats{
+    position: relative;
     vertical-align: top;
     display: inline-block;
-    background-color: #122b40;
+    background-color: black;
     color: white;
     height: 100%;
+    font-size: 0.3rem;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
+    width: 15%;
+    box-sizing: border-box;
+}
+
+.stats_text{
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.stats a{
+    display: block;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.title{
+    display: inline-block;
+    width: 10%;
+    font-family: pacmanFont;
+    height: 100%;
+    background-color: black;
+    vertical-align: top;
+}
+
+.title div{
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    color: #fff;
+    height: 90%;
+    width: 2rem;
+    font-size: 1.3rem;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    padding: 20%;
 }
 
 .label{
-    font-size: 30px;
+    font-family: pressFont;
+    font-size: 0.3rem;
     padding: 15px;
 }
 
-.value{
-
-}
 
 .reset{
     text-align: center;
     padding: 10px;
-}
-
-.gameArea{
-    margin: auto;
-    display: inline-block;
-    border: 1px solid;
-    border-radius: 30px;
-    background-color: white;
-}
-
-.gameArea1{
-    position: relative;
-    border-left: 70px solid;
-    border-right: 70px solid;
-    border-color: #d200ff;
-    display: inline-block;
+    width: 5vw;
 }
 
 .message{
     position: absolute;
-    font-family: press;
+    font-family: pressFont;
+    color: gold;
     font-size: 4rem;
     top: 50%;
-    left: 50%;
+    left: 53%;
     transform: translate(-50%,-50%);
     z-index: 10;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+}
 
+.machine{
+    width: 75%;
+    height: 100%;
+    display: inline-block;
+    font-size: 0;
+    text-align: center;
+}
+
+.gameArea{
+    position: relative;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 30px;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.gameArea0{
+    border-left: 6.1vw solid;
+    border-right: 6.1vw solid;
+    border-color: black;
+    display: inline-block;
+    width: 83.9%;
+    height: 66%;
+}
+
+.gameArea1{
+    border-left: 2.11vw solid;
+    border-right: 2.6vw solid;
+    border-color: #d200ff;
+    display: inline-block;
+    width: 92.5%;
+    height: 100%;
 }
 
 .gameArea2{
-    border-top: 40px solid;
-    border-bottom: 40px solid;
-    border-left:100px solid;
-    border-right: 100px solid;
+    border-top: 1.5vh solid;
+    border-bottom: 1.5vh solid;
+    border-left: 2.8vw solid;
+    border-right: 2.2vw solid;
     border-color:  #191919;
     background-color: #191919;
+    width: 92%;
+    height: 96%;
 }
 
 .gameArea3{
-    border-top: 30px solid;
-    border-bottom: 30px solid;
-    border-left:40px solid;
-    border-right: 40px solid;
+    border-top: 1.5vh solid;
+    border-bottom: 1.5vh solid;
+    border-left: 1vw solid;
+    border-right: 1vw solid;
     border-radius: 30px;
     border-color: #252526;
     background-color: #252526;
+    width: 95%;
+    height: 90%;
+}
+
+.row{
+    width: 100%;
+    height: 32%;
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+.card_container{
+    perspective: 1000px;
+    position: relative;
+    display: inline-block;
+    margin: 1.5%;
+    width: 13.6%;
+    height: 97%;
 }
 
 .card{
+    transition: 0.2s;
+    transform-style: preserve-3d;
     position: relative;
-    display: inline-block;
-    margin: 25px;
-    width: 110px;
-    height: 157px;
+    width: 100%;
+    height: 100%;
+}
+
+.front, .back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 82%;
+    border: 3px solid #d200ff;
+    border-radius: 5px;
+    padding: 10%;
+    backface-visibility: hidden;
 }
 
 .front{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 75%;
-    height: 82%;
-    border: 3px solid;
-    border-radius: 5px;
-    padding: 10%;
+    transform: rotateY(180deg);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:contain;
 }
 
 .back{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 75%;
-    height: 82%;
     background-image: url("image/arcade.png");
     background-repeat: no-repeat;
     background-position: center;
     background-color: cadetblue;
-    border: 3px solid;
-    border-radius: 5px;
-    padding: 10%;
+    background-size:contain;
+    transform: rotateY(0deg);
+}
+
+.flip{
+    transform: rotateY(180deg);
 }
 
 .hidden > .back{
     display: none;
 }
 
-@keyframes fadeInOut {
-    0% {
-        opacity:1;
+.message.hidden{
+    display: none;
+}
+
+footer{
+    text-align: center;
+    width: 100%;
+    height: 16.2%;
+}
+
+footer img{
+    width: 100%;
+    height: 100%;
+}
+
+
+@keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
     }
-    45% {
-        opacity:1;
-    }
-    55% {
-        opacity:0;
-    }
-    100% {
-        opacity:0;
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
     }
 }
 
-#cf3 img.top {
-    animation-name: fadeInOut;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-duration: 10s;
-    animation-direction: alternate;
+@keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+    }
+}
+
+.glowbutton{
+    text-align:center;
+    text-decoration:none;
+    padding:1vh 1vw;
+    border-size:3px;
+    border-style:solid;
+    border-radius:10px;
+    transition:all .1s linear;
+    margin:0.5vh 2vw;
+}
+
+.reset_button{
+    border-color:#ff00de;
+    color:#ff00de;
+    box-shadow:0px 0px 2px 1px #ff00de,
+    inset 0px 0px 2px #ff00de;
+    text-shadow:0px 0px 2px #ff00de;
+}
+.reset_button:hover{
+    box-shadow:0px 0px 10px 5px #ff00de,
+    inset 0px 0px 7px #ff00de;
+    text-shadow:0px 0px 4px #ff00de;
+}
+
+/*************** About.html ****************************/
+.about{
+    text-align: center;
+    margin: auto;
+    background-color: black;
+}
+
+.about_display{
+    text-align: left;
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 30px;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: pressFont;
+    color: whitesmoke;
+}
+
+.about_display img {
+    width: 15%;
+}
+
+.about_display a {
+    font-size: 0.8vw;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.about_display h3 {
+    vertical-align: middle;
+    font-size: 1.2vw;
+}
+
+.about_display p {
+    text-align: left;
+    vertical-align: middle;
+    font-size: 0.8vw;
+}
+.about_display li {
+    text-align: left;
+    font-size: 0.8vw;
 }

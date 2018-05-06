@@ -1,0 +1,107 @@
+body{
+    width: 100vw;
+}
+
+header{
+    text-align: center;
+    width: 100%;
+    background-color: #122b40;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: packmanFont;
+    font-size: 40px;
+}
+
+@font-face {
+    font-family: packmanFont;
+    src: url(Games.ttf);
+}
+
+.main-section{
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.stats{
+    vertical-align: top;
+    display: inline-block;
+    background-color: #122b40;
+    color: white;
+    height: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+.label{
+    font-size: 30px;
+    padding: 15px;
+}
+
+.value{
+
+}
+
+.reset{
+    text-align: center;
+    padding: 10px;
+}
+
+.gameArea{
+    margin: auto;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.gameArea1{
+    border-left: 70px solid;
+    border-right: 70px solid;
+    border-color: #d200ff;
+    display: inline-block;
+}
+
+.gameArea2{
+    border-top: 40px solid;
+    border-bottom: 40px solid;
+    border-left:100px solid;
+    border-right: 100px solid;
+    border-color:  #191919;
+    background-color: #191919;
+}
+
+.gameArea3{
+    border-top: 30px solid;
+    border-bottom: 30px solid;
+    border-left:40px solid;
+    border-right: 40px solid;
+    border-radius: 30px;
+    border-color: #252526;
+    background-color: #252526;
+}
+
+.card{
+    display: inline-block;
+    margin: 30px;
+}
+
+.front{
+    display: none;
+    width: 100px;
+    height: 147px;
+}
+
+.back{
+    width: 100px;
+    height: 147px;
+    background-image: url("image/arcade.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: cadetblue;
+    border: 3px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
